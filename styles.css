@@ -1,303 +1,59 @@
-/* 
-COLOR PALETTE 
-Dark green #3c8453 
-Sandy beige #bcaa96 
-Dark gray #222222 
-Light gray #d3d4d6 
-Off-white #f6f6f6 
-*/ 
-/* GLOBAL STYLES 
-------------------------------------*/ 
-/* 
- https://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
-*/ 
-html { 
- box-sizing: border-box; 
- font-size: 62.5%; /* set default to 10px */ 
-} 
-*, *:before, *:after { 
- box-sizing: inherit; 
-} 
-html, body { 
- height: 100%; 
-} 
-body { 
- background: #f6f6f6; 
- margin: 0; 
- font-family: 'Open Sans', sans-serif; 
- font-size: 1.5rem; 
- line-height: 1.4; 
-} 
-h1, h2, h3 { 
- font-family: 'Caveat', cursive; 
- font-weight: 400; 
- margin: 0; 
-} 
-h1 { 
- font-size: 7rem; 
- line-height: 0.85; 
-} 
-h2 { 
- font-size: 3.6rem; 
-} 
-h3 { 
- font-size: 2.4rem; 
-} 
-/* links */ 
-a { 
- color: #3c8453; 
-} 
-a:hover { 
- color: #bcaa96; 
- text-decoration: none; 
-} 
-footer a { 
- color: #bcaa96; 
-} 
-footer a:hover { 
- color: #3c8453; 
-} 
-.btn { 
- background: #3c8453; 
- color: #f6f6f6; 
- text-decoration: none; 
- text-transform: uppercase; 
- font-size: 1.2rem; 
- display: inline-block; 
- padding: 7px; 
- letter-spacing: 0.1em; 
- line-height: 1; 
- border-radius: 4px; 
-} 
-.content-wrapper { 
- margin: 0 auto; 
- padding: 30px; 
- max-width: 900px; 
-} 
-/* HOME 
-------------------------------------*/ 
-.home { 
- background: url(images/bg-home-office-studio.jpg) no-repeat;
- background-size: cover; 
- display: flex; 
- flex-direction: column; 
-} 
-.home .content-wrapper { 
- flex: 1 0 auto; 
-} 
-.content-bg { 
- background: rgb(255 255 255 / 0.9); 
- padding: 30px; 
-} 
-@media screen and (max-width:650px){ 
- .home .content-wrapper { 
- padding: 10px; 
- } 
- .content-bg { 
- padding: 20px; 
- } 
-} 
-/* RESUME 
-------------------------------------*/ 
-.resume header::before { 
- background: url(../images/bg-home-office-studio.jpg) center; 
- background-size: cover; 
- content: ""; 
- display: block; 
- height: 375px; 
-} 
-.resume-section { 
- margin-bottom: 50px; 
-} 
-.resume-section h2 { 
- border-bottom: 2px dashed #d3d4d6; 
-} 
-.download-link { 
- position: fixed; 
- top: 5px; 
- left: 5px; 
- font-size: 1.5rem; 
-} 
-@media screen and (max-width: 1200px){ 
- .download-link { 
- position: absolute; 
- } 
-} 
-@media screen and (max-width: 500px){ 
- .resume header::before { 
- height: 200px; 
- } 
- h1 { 
- font-size: 5rem; 
- } 
- h2 { 
- font-size: 2.6rem; 
- } 
-} 
-/* Projects 
-------------------------------------*/ 
-.project-item { 
- margin: 30px 0; 
-} 
-.project-item img { 
- width: 300px; 
-} 
-@media screen and (min-width:860px) { 
- .project-item { 
- display: grid; 
- grid-template-columns: 300px 1fr; 
- column-gap: 20px; 
- align-items: start; 
- } 
- .project-item img { 
- width: 300px; 
- } 
-} 
-@media screen and (min-width:650px) and (max-width:859px) { 
- .project-wrapper { 
- display: grid; 
- grid-template-columns: repeat(2, 1fr); 
- column-gap: 20px; 
- } 
- .project-item img { 
- width: 100%; 
- } 
-} 
-@media screen and (max-width:500px){ 
- .project-item img { 
- width: 100%; 
- margin-bottom: 10px; 
- } 
-} 
-/* Work Experience 
-------------------------------------*/ 
-.work-item { 
- margin: 30px 0; 
-} 
-.work-details p { 
- margin: 0; 
-} 
-@media screen and (min-width: 860px) { 
- .work-item { 
- display: grid; 
- grid-template-columns: 300px 1fr; 
- column-gap: 20px; 
- } 
- .work-summary p:first-child { 
- margin-top: 0; 
- } 
-} 
-/* Education 
-------------------------------------*/ 
-.education-item { 
- margin: 8px 0; 
-} 
-.education-details p { 
- margin: 0; 
-} 
-.education-details p:first-child { 
- font-weight: 700; 
- font-size: 1.7rem; 
- margin-bottom: 4px; 
-} 
-.education-details .institution { 
- font-weight: 600; 
- color: #000; 
- margin-bottom: 2px; 
-} 
-.education-details .meta { 
- font-size: 1.2rem; 
- color: #666; 
- margin-bottom: 6px; 
-} 
-.education-details p:last-child { 
- font-size: 1.3rem; 
- color: #333; 
-} 
-/* Relevant coursework badges */ 
-.section-subtitle { 
- margin: 8px 0 6px 0; 
- font-family: 'Open Sans', sans-serif; 
- font-weight: 700; 
- font-size: 1.6rem; 
- text-decoration: underline; 
-} 
-.relevant-coursework .course-badges { 
- list-style: none; 
- margin: 6px 0 0 0; 
- padding: 0; 
- display: flex; 
- flex-wrap: wrap; 
- gap: 8px; 
-} 
-.course-badge { 
- background: #ffffff; 
- border: 1px solid #d3d4d6; 
- padding: 6px 10px; 
- border-radius: 999px; 
- font-size: 1.3rem; 
- color: #222222; 
- box-shadow: 0 1px 0 rgba(0,0,0,0.03); 
-} 
-@media screen and (max-width: 500px){ 
- .course-badge { font-size: 1.2rem; padding: 5px 8px; } 
-} 
-/* Research papers list */ 
-.research-list { 
- list-style: none; 
- margin: 6px 0 0 0; 
- padding: 0; 
-} 
-.research-list li { 
- margin: 8px 0; 
- font-size: 1.4rem; 
- color: #222; 
- line-height: 1.5; 
-} 
-.research-list strong { 
- font-weight: 700; 
- color: #222222; 
-} 
-/* FOOTER 
-------------------------------------*/ 
-footer { 
- background: #222; 
- color: #d3d4d6; 
-} 
-.socials { 
- list-style-type: none; 
- padding: 0; 
-} 
-.socials li { 
- display: inline-block; 
- margin-left: 10px; 
-} 
-.socials img { 
- width: 32px; 
-} 
-.socials img:hover { 
- opacity: 0.5; 
-} 
-@media screen and (min-width: 860px){ 
- footer { 
- display: flex; 
- justify-content: space-between; 
- padding: 0 20px; 
- } 
-} 
-@media screen and (max-width: 859px){ 
- footer { 
- text-align: center; 
- padding: 10px; 
- } 
+/*
+COLOR PALETTE
+Dark green #3c8453
+Sandy beige #bcaa96
+Dark gray #222222
+Light gray #d3d4d6
+Off-white #f6f6f6
+*/
+
+/* GLOBAL STYLES
+------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* set default to 10px */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: #f6f6f6;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+h1, h2, h3 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+h1 {
+  font-size: 7rem;
+  line-height: 0.85;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.4rem;
 }
 
-/* === Inline rounded buttons + title row (matches preview) === */
+/* links */
+a { color: #3c8453; }
+a:hover { color: #bcaa96; text-decoration: none; }
+footer a { color: #bcaa96; }
+footer a:hover { color: #3c8453; }
+
+/* Primary button (base) */
 .btn {
   background: #3c8453;
   color: #f6f6f6;
   text-decoration: none;
-  text-transform: none;
+  text-transform: none;           /* keep labels readable */
   font-weight: 600;
   font-size: 1.3rem;
   display: inline-flex;
@@ -305,7 +61,7 @@ footer {
   gap: 0.4rem;
   padding: 8px 12px;
   line-height: 1;
-  border-radius: 999px;             /* pill shape */
+  border-radius: 999px;           /* pill shape */
   border: 1px solid rgba(0,0,0,0.05);
   box-shadow: 0 1px 2px rgba(0,0,0,0.06);
   white-space: nowrap;
@@ -328,77 +84,213 @@ footer {
   color: #2b5c39;
 }
 
-/* Place button inline with the project title */
-.project-heading {
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 900px;
+}
+
+/* HOME
+------------------------------------*/
+.home {
+  background: url(images/bg-home-office-studio.jpg) center / cover no-repeat;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0 0 8px 0;
+  flex-direction: column;
 }
-.project-heading h3 {
-  margin: 0;
+.home .content-wrapper { flex: 1 0 auto; }
+.content-bg {
+  background: rgb(255 255 255 / 0.9);
+  padding: 30px;
 }
-
-/* Tighten paragraph spacing under the heading row */
-.project-item p {
-  margin-top: 6px;
+@media screen and (max-width:650px){
+  .home .content-wrapper { padding: 10px; }
+  .content-bg { padding: 20px; }
 }
 
-/* === Inline rounded buttons + title row (matches preview) === */
-.btn {
-  background: #3c8453;
-  color: #f6f6f6;
-  text-decoration: none;
-  text-transform: none;
-  font-weight: 600;
-  font-size: 1.3rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 8px 12px;
-  line-height: 1;
-  border-radius: 999px;             /* pill shape */
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-  white-space: nowrap;
-  transition: all 120ms ease-in-out;
-}
-.btn:hover {
-  background: #356f47;
-  color: #ffffff;
-  transform: translateY(-1px);
+/* RESUME
+------------------------------------*/
+/* Header background strip for the resume page */
+.resume header::before {
+  background: url(images/bg-home-office-studio.jpg) center / cover no-repeat;
+  content: "";
+  display: block;
+  height: 375px;
 }
 
-/* Subtle/secondary pill (used for Tech Talks in the preview) */
-.btn--subtle {
-  background: #ffffff;
-  color: #3c8453;
-  border: 1px solid #d3d4d6;
+.resume-section { margin-bottom: 50px; }
+.resume-section h2 { border-bottom: 2px dashed #d3d4d6; }
+
+.download-link {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  font-size: 1.5rem;
 }
-.btn--subtle:hover {
-  background: #f3f6f4;
-  color: #2b5c39;
+@media screen and (max-width: 1200px){
+  .download-link { position: absolute; }
+}
+@media screen and (max-width: 500px){
+  .resume header::before { height: 200px; }
+  h1 { font-size: 5rem; }
+  h2 { font-size: 2.6rem; }
+}
+
+/* Projects
+------------------------------------*/
+.project-item { margin: 30px 0; }
+.project-item img { width: 300px; }
+
+@media screen and (min-width:860px) {
+  .project-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+    align-items: start;
+  }
+  .project-item img { width: 300px; }
+}
+
+/* 2-up layout for mid-size screens */
+@media screen and (min-width:650px) and (max-width:859px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  .project-item img { width: 100%; }
+}
+
+/* Stack on small screens */
+@media screen and (max-width:500px){
+  .project-item img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 /* Title row: keep button on the same line as the project title */
 .project-heading {
   display: flex;
   align-items: center;
-  gap: 10px;                        /* space between title and button */
-  flex-wrap: wrap;                   /* wrap button under title on small screens */
+  gap: 10px;           /* space between title and button */
+  flex-wrap: wrap;     /* wraps nicely on small screens */
   margin: 0 0 8px 0;
 }
-.project-heading h3 {
-  margin: 0;
-}
+.project-heading h3 { margin: 0; }
 
 /* Ensure two-column layout places text to the right of the image */
 .project-item .project-content { align-self: start; }
 
 /* Tighten paragraph spacing under the heading row */
-.project-item p {
-  margin-top: 6px;
+.project-item p { margin-top: 6px; }
+
+/* Work Experience
+------------------------------------*/
+.work-item { margin: 30px 0; }
+.work-details p { margin: 0; }
+
+@media screen and (min-width: 860px) {
+  .work-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  }
+  .work-summary p:first-child { margin-top: 0; }
+}
+
+/* Education
+------------------------------------*/
+.education-item { margin: 8px 0; }
+.education-details p { margin: 0; }
+.education-details p:first-child {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+.education-details .institution {
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+.education-details .meta {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+.education-details p:last-child {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Relevant coursework badges */
+.section-subtitle {
+  margin: 8px 0 6px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+.relevant-coursework .course-badges {
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.course-badge {
+  background: #ffffff;
+  border: 1px solid #d3d4d6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 1.3rem;
+  color: #222222;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+@media screen and (max-width: 500px){
+  .course-badge { font-size: 1.2rem; padding: 5px 8px; }
+}
+
+/* Research papers list */
+.research-list {
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+}
+.research-list li {
+  margin: 8px 0;
+  font-size: 1.4rem;
+  color: #222;
+  line-height: 1.5;
+}
+.research-list strong {
+  font-weight: 700;
+  color: #222222;
+}
+
+/* FOOTER
+------------------------------------*/
+footer {
+  background: #222;
+  color: #d3d4d6;
+}
+.socials { list-style-type: none; padding: 0; }
+.socials li { display: inline-block; margin-left: 10px; }
+.socials img { width: 32px; }
+.socials img:hover { opacity: 0.5; }
+
+@media screen and (min-width: 860px){
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 859px){
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
 }
 
 /* ===========================================================
@@ -477,4 +369,3 @@ footer {
     box-shadow: none !important;
   }
 }
-
